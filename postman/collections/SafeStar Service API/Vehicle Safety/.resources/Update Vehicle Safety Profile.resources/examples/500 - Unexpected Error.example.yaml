@@ -6,6 +6,12 @@ request:
     Accept: application/json
   pathVariables:
     id: "1002"
+  body:
+    type: json
+    content: |-
+      {
+          "newCode": false
+      }
 response:
   statusCode: 500
   statusText: Internal Server Error

@@ -13,7 +13,7 @@ response:
     Content-Type: application/json
   body:
     type: json
-    content: >-
+    content: |-
       {
         "id": "{{$pathSegments '1'}}",
         "status": "success",

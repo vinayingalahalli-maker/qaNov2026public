@@ -1,14 +1,16 @@
 $kind: collection
 name: Workflow Tests
 auth:
-  type: jwt
-  credentials:
-    isSecretBase64Encoded: true
-    secret: "{{jwtSecret}}"
-    algorithm: HS256
-    payload: "{}"
-    addTokenTo: header
-    headerPrefix: Bearer
-    queryParamKey: token
-    header: "{}"
+  - id: 2d10b305-de32-43b6-9895-3dcebc8a9276
+    type: jwt
+    name: jwt auth
+    credentials:
+      algorithm: HS256
+      secret: "{{jwtSecret}}"
+      isSecretBase64Encoded: true
+      addTokenTo: header
+      payload: "{}"
+      queryParamKey: token
+      header: "{}"
+      headerPrefix: Bearer
 order: 1000

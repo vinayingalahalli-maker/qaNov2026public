@@ -2,6 +2,8 @@ $kind: http-example
 request:
   url: "{{baseUrl}}/vehicle/:id"
   method: DELETE
+  headers:
+    Accept: application/json
   pathVariables:
     id: "1002"
 response:

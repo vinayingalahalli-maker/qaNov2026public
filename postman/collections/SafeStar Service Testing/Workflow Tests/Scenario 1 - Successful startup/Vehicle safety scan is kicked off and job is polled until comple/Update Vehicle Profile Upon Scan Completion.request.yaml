@@ -1,5 +1,4 @@
 $kind: http-request
-name: Update Vehicle Profile Upon Scan Completion
 url: "{{baseUrl}}/vehicle/:id"
 method: PATCH
 headers:
@@ -23,4 +22,11 @@ auth:
     headerPrefix: Bearer
     queryParamKey: token
     header: "{}"
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test("Response time is less than 600ms", function () {
+          pm.expect(pm.response.responseTime).to.be.below(600);
+      });
+    language: text/javascript
 order: 3000

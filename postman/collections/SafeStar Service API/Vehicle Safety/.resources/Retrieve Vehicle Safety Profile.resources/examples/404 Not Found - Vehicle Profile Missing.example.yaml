@@ -2,6 +2,8 @@ $kind: http-example
 request:
   url: "{{baseUrl}}/vehicle/:id"
   method: GET
+  headers:
+    Accept: application/json
   pathVariables:
     - key: id
       value: "1002"
