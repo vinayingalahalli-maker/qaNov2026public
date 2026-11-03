@@ -2,7 +2,7 @@ $kind: collection
 name: Diagnostic report is sent to SafeStar
 scripts:
   - type: http:afterResponse
-    code: >-
+    code: |-
       pm.test("Status code is one of the expected values", () => {
               // Define an array of acceptable status codes
               const expectedStatusCodes = [200, 201, 204];
@@ -10,4 +10,5 @@ scripts:
               // Assert that the actual response code is included in the expectedStatusCodes array
               pm.expect(pm.response.code).to.be.oneOf(expectedStatusCodes);
           });
+    language: text/javascript
 order: 4000
